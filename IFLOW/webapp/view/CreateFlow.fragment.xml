@@ -1,0 +1,166 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.table"
+	xmlns:core="sap.ui.core" >
+	
+	<VBox class="sapUiSmallMargin">
+		<f:Form id="idFormHeader"
+			editable="true"
+			ariaLabelledBy="Title1">
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer id="idForm1" ariaLabelledBy="Title2">
+					<f:toolbar>
+						<Toolbar>
+							<Title id="Title2" text="결재 헤더"/>
+							<ToolbarSpacer />
+							<!--<Button id="idBtnHeaderConfirm" icon="sap-icon://accept" text="오더 생성" press="onConfirm" type="Accept"/>-->
+						</Toolbar>
+					</f:toolbar>
+					<f:formElements>
+						<f:FormElement label="{i18n>TITLE}">
+							<f:fields>
+								<Input value="{TITLE}" required="true" submit="onHeaderConfirm" valueState="{propInput/inputTITLE/valueState}" />
+							</f:fields>
+						</f:FormElement>
+						<!--<f:FormElement label="{i18n>FLOWCODE}">-->
+						<!--	<f:fields>-->
+						<!--		<Input value="{FLOWCODE}" showValueHelp="true" required="true" submit="onHeaderConfirm" valueState="{propInput/inputAUART/valueState}" />-->
+						<!--	</f:fields>-->
+						<!--</f:FormElement>-->
+						<!--<f:FormElement label="{i18n>FLOWNO}">-->
+						<!--	<f:fields>-->
+						<!--		<Input value="{FLOWNO}" required="true" submit="onHeaderConfirm" valueState="{propInput/inputVKORG/valueState}" />-->
+						<!--	</f:fields>-->
+						<!--</f:FormElement>-->
+						<!--<f:FormElement label="{i18n>FLOWCNT}">-->
+						<!--	<f:fields>-->
+						<!--		<Input value="{FLOWCNT}" required="true" submit="onHeaderConfirm" valueState="{propInput/inputVTWEG/valueState}" />-->
+						<!--	</f:fields>-->
+						<!--</f:FormElement>-->
+					</f:formElements>
+				</f:FormContainer>
+				<!--<f:FormContainer ariaLabelledBy="Title3">-->
+				<!--	<f:toolbar>-->
+				<!--		<Toolbar>-->
+				<!--			<Title id="Title3" text="결재 아이템"/>-->
+				<!--			<ToolbarSpacer />-->
+				<!--		</Toolbar>-->
+				<!--	</f:toolbar>-->
+				<!--	<f:formElements>-->
+				<!--		<f:FormElement label="영업영역">-->
+				<!--			<f:fields>-->
+				<!--				<Input id="idTextVKORG" value="{VKORG}" editable="false" />-->
+				<!--				<Input id="idTextVTWEG" value="{VTWEG}" editable="false" >-->
+				<!--					<layoutData>-->
+				<!--						<l:GridData span="XL3 L1 M3 S4" />-->
+				<!--					</layoutData>-->
+				<!--				</Input>-->
+				<!--				<Input id="idTextSPART" value="{SPART}" editable="false" >-->
+				<!--					<layoutData>-->
+				<!--						<l:GridData span="XL3 L1 M3 S4" />-->
+				<!--					</layoutData>-->
+				<!--				</Input>-->
+				<!--			</f:fields>-->
+				<!--		</f:FormElement>-->
+				<!--		<f:FormElement label="고객번호">-->
+				<!--			<f:fields>-->
+				<!--				<Input value="{KUNNR}" editable="{propInput/inputKUNNR/editable}"/>-->
+				<!--			</f:fields>-->
+				<!--		</f:FormElement>-->
+				<!--		<f:FormElement label="정가">-->
+				<!--			<f:fields>-->
+				<!--				<Input value="{NETWR}" editable="false"/>-->
+				<!--			</f:fields>-->
+				<!--		</f:FormElement>-->
+				<!--		<f:FormElement label="통화">-->
+				<!--			<f:fields>-->
+				<!--				<Input value="{WAERS}" editable="{propInput/inputWAERS/editable}"/>-->
+				<!--			</f:fields>-->
+				<!--		</f:FormElement>-->
+				<!--	</f:formElements>-->
+				<!--</f:FormContainer>-->
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+	
+	<u:Table
+		id="idTableInputItem"
+		selectionMode="MultiToggle"
+		visibleRowCount="10"
+		paste="onPaste"
+		ariaLabelledBy="title">
+		<u:extension>
+			<OverflowToolbar>
+				<Title text="결재 아이템"/>
+				<ToolbarSpacer />
+			</OverflowToolbar>
+		</u:extension>
+		<u:columns>
+			<u:Column width="10rem">
+				<Label text="{i18n>APPROVE_LOGIN_ID}" />
+				<u:template>
+					<Input value="{APPROVE_LOGIN_ID}" maxLength="10" submit="onChangeItem" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="11rem">
+				<Label text="{i18n>APPROVER_SAP_ID}" />
+				<u:template>
+					<Input value="{APPROVER_SAP_ID}" maxLength="10" submit="onChangeItem" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="10rem">
+				<Label text="{i18n>APPROVER_NAME}" />
+				<u:template>
+					<Input value="{APPROVER_NAME}" maxLength="13" submit="onChangeItem" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="10rem">
+				<Label text="{i18n>APPROVER_PERNR}" />
+				<u:template>
+					<Input value="{APPROVER_PERNR}" submit="onChangeItem" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="10rem">
+				<Label text="{i18n>APPROVER_ORGEH}" />
+				<u:template>
+					<Input value="{APPROVER_ORGEH}" submit="onChangeItem" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="10rem">
+				<Label text="{i18n>APPROVER_ORGTX}" />
+				<u:template>
+					<Input value="{APPROVER_ORGTX}" maxLength="10" submit="onChangeItem" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+	</u:Table>
+</core:FragmentDefinition>

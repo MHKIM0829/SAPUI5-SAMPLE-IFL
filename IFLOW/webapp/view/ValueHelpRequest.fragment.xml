@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+	xmlns="sap.ui.comp.valuehelpdialog"
+	xmlns:m="sap.m"
+	xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:core="sap.ui.core">
+	<ValueHelpDialog
+		ok=".onPublicValueHelpOkPress"
+		cancel=".onPublicValueHelpCancelPress"
+		afterClose=".onPublicValueHelpAfterClose"
+		supportRanges="false"
+		supportMultiselect="false"
+		key="ProductId"
+		descriptionKey="Name">
+	</ValueHelpDialog>
+</core:FragmentDefinition>

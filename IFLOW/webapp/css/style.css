@@ -1,0 +1,20 @@
+/* Enter your custom styles here */
+
+.sapUiFormResGrid>div {
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+.sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapMITB.sapUiResponsiveContentPadding > .sapMITBContainerContent > .sapMITBContent, .sapMITB.sapUiResponsiveContentPadding > .sapMITBContainerContent > .sapMITBContent {
+    padding: 0rem 2rem;
+    box-sizing: border-box;
+}
+
+.sapUiBodyBackground, .sapUiBody {
+    background-color: #f7f7f7;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    zoom: 90%;
+}

@@ -1,0 +1,228 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.table"
+	xmlns:core="sap.ui.core" >
+	<!--Header-->
+	<u:Table
+		id="idViewFlowHeader"
+		rows="{/}"
+		selectionMode="MultiToggle"
+		visibleRowCount="10"
+		paste="onPaste"
+		cellClick="onClickHeader"
+		ariaLabelledBy="title">
+		<u:extension>
+			<OverflowToolbar>
+				<Title id="title" text="Header"/>
+				<ToolbarSpacer/>
+				<Button id="idBtnHeaderDelete" icon="sap-icon://delete" text="Delete" press="onDeleteFlow" type="Accept"/>
+			</OverflowToolbar>
+		</u:extension>
+		<u:columns>
+			<u:Column width="20rem">
+				<Label text="{i18n>FLOWNO}" />
+				<u:template>
+					<Text text="{FLOWNO}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>FLOWCODE}" />
+				<u:template>
+					<Text text="{FLOWCODE}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>FLOWCNT}" />
+				<u:template>
+					<Text text="{FLOWCNT}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="15rem">
+				<Label text="{i18n>TITLE}" />
+				<u:template>
+					<Text text="{TITLE}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>CREATE_DATE}" />
+				<u:template>
+					<Text text="{CREATE_DATE}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>CREATE_TIME}" />
+				<u:template>
+					<Text text="{CREATE_TIME}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>CREATOR_NAME}" />
+				<u:template>
+					<Text text="{CREATOR_NAME}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>CREATOR_ORGEH}" />
+				<u:template>
+					<Text text="{CREATOR_ORGEH}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>CREATOR_ORGTX}" />
+				<u:template>
+					<Text text="{CREATOR_ORGTX}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+	</u:Table>
+	<!--Item-->
+	<u:Table
+		id="idViewFlowDetail"
+		selectionMode="MultiToggle"
+		visibleRowCount="10"
+		paste="onPaste"
+		ariaLabelledBy="title">
+		<u:extension>
+			<OverflowToolbar>
+				<Title id="test" text="Item"/>
+			</OverflowToolbar>
+		</u:extension>
+		<u:columns>
+			<u:Column width="20rem">
+				<Label text="{i18n>FLOWNO}" />
+				<u:template>
+					<Text text="{FLOWNO}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>FLOWCODE}" />
+				<u:template>
+					<Text text="{FLOWCODE}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>FLOWCNT}" />
+				<u:template>
+					<Text text="{FLOWCNT}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="5rem">
+				<Label text="{i18n>FLOWIT}" />
+				<u:template>
+					<Text text="{FLOWIT}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>WFIT_TYPE}" />
+				<u:template>
+					<Text text="{WFIT_TYPE}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>CREATE_DATE}" />
+				<u:template>
+					<Text text="{CREATE_DATE}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>CREATE_TIME}" />
+				<u:template>
+					<Text text="{CREATE_TIME}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>START_DATE}" />
+				<u:template>
+					<Text text="{START_DATE}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>START_TIME}" />
+				<u:template>
+					<Text text="{START_TIME}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>IT_WFSTAT}" />
+				<u:template>
+					<Text text="{IT_WFSTAT}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>APPROVE_LOGIN_ID}" />
+				<u:template>
+					<Text text="{APPROVE_LOGIN_ID}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>APPROVER_NAME}" />
+				<u:template>
+					<Text text="{APPROVER_NAME}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>APPROVER_PERNR}" />
+				<u:template>
+					<Text text="{APPROVER_PERNR}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>APPROVER_ORGEH}" />
+				<u:template>
+					<Text text="{APPROVER_ORGEH}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+		<u:columns>
+			<u:Column width="6rem">
+				<Label text="{i18n>APPROVER_ORGTX}" />
+				<u:template>
+					<Text text="{APPROVER_ORGTX}" wrapping="false" />
+				</u:template>
+			</u:Column>
+		</u:columns>
+	</u:Table>
+</core:FragmentDefinition>

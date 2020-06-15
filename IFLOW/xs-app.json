@@ -1,0 +1,19 @@
+{
+  "welcomeFile": "/IFLOW/index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "^/IFLOW/(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+    },
+    {
+		"source": "^/IFLOW/(.*)",
+		"target": "$1",
+		"destination": "dest_NODEIFL"
+	}
+  ]
+}

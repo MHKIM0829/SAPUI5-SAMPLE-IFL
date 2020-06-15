@@ -1,0 +1,40 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/NODE_SAMP",
+      "target": {
+        "type": "destination",
+        "name": "NODE_SAMP"
+      },
+      "description": "NODE_SAMP"
+    },
+    {
+      "path": "/NODE_TEST",
+      "target": {
+        "type": "destination",
+        "name": "NODE_TEST"
+      },
+      "description": "NODE_TEST"
+    }
+  ],
+  "sendWelcomeFileRedirect": true
+}
